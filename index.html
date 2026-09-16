@@ -11,7 +11,21 @@
 
 .hero{position:relative;min-height:390px;background-image:linear-gradient(90deg,rgba(255,255,255,.72),rgba(255,255,255,.57)),url("hero-background.png");background-size:cover;background-position:center;overflow:hidden;border-bottom:1px solid var(--line)}.hero:after{content:"";position:absolute;inset:auto 0 0;height:90px;background:linear-gradient(transparent,var(--paper));pointer-events:none}.hero-inner{position:relative;z-index:1;max-width:var(--max);min-height:390px;margin:auto;padding:54px 34px 72px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:center}.identity{text-align:center}.avatar{width:184px;height:184px;margin:0 auto 18px;border-radius:50%;overflow:hidden;border:5px solid rgba(255,255,255,.94);box-shadow:var(--shadow);background:#e6eef5}.avatar img{width:100%;height:100%;object-fit:cover}.socials{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.socials a{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.96);color:#294761;box-shadow:0 4px 14px rgba(24,60,94,.12);transition:transform .2s,background .2s,color .2s}.socials a:hover{transform:translateY(-3px);background:var(--blue);color:#fff}.socials svg{width:18px;height:18px;fill:currentColor}.socials .rednote{font-size:11px;font-weight:800;letter-spacing:-.04em}.hero-copy{max-width:650px}.eyebrow{margin-bottom:8px;color:var(--blue-dark);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.hero h1{margin:0 0 6px;font-size:44px;line-height:1.12;letter-spacing:-.035em}.hero h1 span{color:var(--blue)}.role{margin:0 0 19px;color:#526276;font-size:18px}.hero-text{max-width:650px;margin:0;color:#3d4c60;font-size:15px}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.pill{padding:6px 11px;border:1px solid rgba(47,118,189,.18);border-radius:999px;background:rgba(255,255,255,.72);color:#335c80;font-size:12px}
 
-main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bottom:70px}.section-head{text-align:center;margin-bottom:28px}.section-head h2{margin:0;font-size:27px;line-height:1.25}.section-head h2:after{content:"";display:block;width:46px;height:3px;margin:12px auto 0;border-radius:9px;background:linear-gradient(90deg,var(--blue),#6ca9dc)}.section-kicker{margin-top:8px;color:var(--muted);font-size:13px}.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px}.panel{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(31,75,116,.06)}.about-copy{padding:26px 28px;color:#455367}.about-copy p{margin:0 0 12px}.about-copy p:last-child{margin:0}.now-card{padding:24px;background:linear-gradient(145deg,#f8fbfe,#edf5fc)}.now-card h3{margin:0 0 12px;font-size:15px}.now-list{display:grid;gap:10px}.now-item{display:flex;gap:10px;align-items:flex-start;color:#526176;font-size:13px}.now-item:before{content:"";width:7px;height:7px;margin-top:8px;border-radius:50%;background:var(--blue);flex:0 0 auto}
+
+.nav-actions{display:flex;align-items:center}
+.tab-shell{position:sticky;top:64px;z-index:15;margin:0 0 34px;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:15px;box-shadow:0 8px 28px rgba(31,75,116,.07)}
+.tab-nav{display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:thin;padding:0 12px}
+.tab-button{position:relative;flex:1;min-width:max-content;border:0;background:transparent;padding:17px 18px;color:#657287;font:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:color .2s,background .2s}
+.tab-button:after{content:"";position:absolute;left:18px;right:18px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:var(--blue);transform:scaleX(0);transition:transform .2s}
+.tab-button:hover{color:var(--blue-dark);background:#f8fbfe}
+.tab-button.active{color:var(--blue-dark)}
+.tab-button.active:after{transform:scaleX(1)}
+.tab-button:focus-visible{outline:3px solid rgba(47,118,189,.24);outline-offset:-3px}
+.tab-panel{margin:0;animation:tabReveal .28s ease}
+.tab-panel[hidden]{display:none!important}
+@keyframes tabReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+main{max-width:var(--max);margin:auto;padding:32px 34px 80px}.section{margin-bottom:70px}.section-head{text-align:center;margin-bottom:28px}.section-head h2{margin:0;font-size:27px;line-height:1.25}.section-head h2:after{content:"";display:block;width:46px;height:3px;margin:12px auto 0;border-radius:9px;background:linear-gradient(90deg,var(--blue),#6ca9dc)}.section-kicker{margin-top:8px;color:var(--muted);font-size:13px}.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px}.panel{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(31,75,116,.06)}.about-copy{padding:26px 28px;color:#455367}.about-copy p{margin:0 0 12px}.about-copy p:last-child{margin:0}.now-card{padding:24px;background:linear-gradient(145deg,#f8fbfe,#edf5fc)}.now-card h3{margin:0 0 12px;font-size:15px}.now-list{display:grid;gap:10px}.now-item{display:flex;gap:10px;align-items:flex-start;color:#526176;font-size:13px}.now-item:before{content:"";width:7px;height:7px;margin-top:8px;border-radius:50%;background:var(--blue);flex:0 0 auto}
 
 .focus-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.focus-card{position:relative;padding:22px 22px 21px;border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}.focus-card:hover{transform:translateY(-3px);border-color:#abc9e2;box-shadow:0 12px 30px rgba(40,93,138,.08)}.focus-card:last-child{grid-column:1/-1}.focus-num{position:absolute;right:16px;top:11px;color:#d8e7f4;font-family:Georgia,serif;font-size:32px}.focus-card h3{position:relative;margin:0 0 7px;font-size:16px}.focus-card p{position:relative;margin:0;color:var(--muted);font-size:13px}
 
@@ -21,20 +35,15 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
 
 .timeline{position:relative;margin:0 auto;max-width:820px}.timeline:before{content:"";position:absolute;left:135px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--blue),#dceaf5)}.timeline-item{display:grid;grid-template-columns:112px 1fr;gap:46px;position:relative;padding:0 0 25px}.timeline-item:after{content:"";position:absolute;left:130px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--blue);border:3px solid #fff;box-shadow:0 0 0 2px #99bedc}.timeline-time{color:var(--blue-dark);font-size:12px;text-align:right}.timeline-body h3{margin:0 0 3px;font-size:15px}.timeline-body p{margin:0;color:var(--muted);font-size:13px}.contact-card{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:27px 30px;border-radius:18px;background:linear-gradient(135deg,#edf5fc,#f8fbfe);border:1px solid #d7e7f3}.contact-card h2{margin:0 0 5px;font-size:21px}.contact-card p{margin:0;color:var(--muted);font-size:13px}.contact-card a.mail{padding:10px 15px;border-radius:999px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;white-space:nowrap}.footer{border-top:1px solid var(--line);padding:24px 0 35px;color:#8894a4;font-size:12px;text-align:center}
 
-@media(max-width:800px){.nav-links a{display:none}.nav-links{gap:10px}.hero-inner{grid-template-columns:1fr;gap:24px;padding:42px 22px 58px}.hero-copy{text-align:center;margin:auto}.hero h1{font-size:34px}.hero-meta{justify-content:center}.hero-text{text-align:left}.about-grid,.focus-grid,.opensource-grid,.stack{grid-template-columns:1fr}.focus-card:last-child{grid-column:auto}.project-card{grid-template-columns:1fr;gap:8px}.project-kind br{display:none}.timeline:before{left:8px}.timeline-item{grid-template-columns:1fr;gap:4px;padding-left:34px}.timeline-item:after{left:3px}.timeline-time{text-align:left}.contact-card{display:block;text-align:center}.contact-card a.mail{display:inline-block;margin-top:16px}main{padding:48px 20px 62px}.nav-inner{padding:0 18px}.avatar{width:156px;height:156px}}
-@media(max-width:480px){.brand{font-size:14px}.hero{background-position:58% center}.hero h1{font-size:30px}.role{font-size:16px}.section{margin-bottom:54px}.section-head h2{font-size:23px}.about-copy,.now-card{padding:21px}.project-card{padding:20px}.socials{gap:8px}}
+@media(max-width:800px){.tab-shell{top:64px;margin:0 -4px 28px;border-radius:12px}.tab-nav{justify-content:flex-start}.tab-button{flex:0 0 auto;padding:15px 16px}.tab-button:after{left:16px;right:16px}.hero-inner{grid-template-columns:1fr;gap:24px;padding:42px 22px 58px}.hero-copy{text-align:center;margin:auto}.hero h1{font-size:34px}.hero-meta{justify-content:center}.hero-text{text-align:left}.about-grid,.focus-grid,.opensource-grid,.stack{grid-template-columns:1fr}.focus-card:last-child{grid-column:auto}.project-card{grid-template-columns:1fr;gap:8px}.project-kind br{display:none}.timeline:before{left:8px}.timeline-item{grid-template-columns:1fr;gap:4px;padding-left:34px}.timeline-item:after{left:3px}.timeline-time{text-align:left}.contact-card{display:block;text-align:center}.contact-card a.mail{display:inline-block;margin-top:16px}main{padding:48px 20px 62px}.nav-inner{padding:0 18px}.avatar{width:156px;height:156px}}
+@media(max-width:480px){.brand{font-size:14px}.tab-button{font-size:13px;padding:14px}.hero{background-position:58% center}.hero h1{font-size:30px}.role{font-size:16px}.section{margin-bottom:54px}.section-head h2{font-size:23px}.about-copy,.now-card{padding:21px}.project-card{padding:20px}.socials{gap:8px}}
 </style>
 </head>
 <body data-lang="zh">
 <nav class="topnav">
   <div class="nav-inner">
     <a class="brand" href="#top"><span class="brand-dot"></span><span>马小兵 · Xiaobing Ma</span></a>
-    <div class="nav-links">
-      <a href="#about"><span class="lang-zh">关于</span><span class="lang-en">About</span></a>
-      <a href="#research"><span class="lang-zh">研究</span><span class="lang-en">Research</span></a>
-      <a href="#projects"><span class="lang-zh">项目</span><span class="lang-en">Projects</span></a>
-      <a href="#opensource"><span class="lang-zh">开源</span><span class="lang-en">Open Source</span></a>
-      <a href="#outputs"><span class="lang-zh">成果</span><span class="lang-en">Outputs</span></a>
+    <div class="nav-actions">
       <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language"><span class="lang-zh">EN</span><span class="lang-en">中文</span></button>
     </div>
   </div>
@@ -66,7 +75,17 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
 </header>
 
 <main>
-<section class="section" id="about">
+  <div class="tab-shell">
+    <div class="tab-nav" role="tablist" aria-label="Homepage sections">
+      <button class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="about" data-tab="about"><span class="lang-zh">关于我</span><span class="lang-en">About</span></button>
+      <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="research" data-tab="research"><span class="lang-zh">研究方向</span><span class="lang-en">Research</span></button>
+      <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="projects" data-tab="projects"><span class="lang-zh">代表项目</span><span class="lang-en">Projects</span></button>
+      <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="opensource" data-tab="opensource"><span class="lang-zh">开源与技术栈</span><span class="lang-en">Open Source</span></button>
+      <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="outputs" data-tab="outputs"><span class="lang-zh">成果与经历</span><span class="lang-en">Outputs</span></button>
+      <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="contact" data-tab="contact"><span class="lang-zh">联系我</span><span class="lang-en">Contact</span></button>
+    </div>
+  </div>
+<section class="section tab-panel active" id="about" data-tab-panel="about" role="tabpanel">
   <div class="section-head"><h2><span class="lang-zh">关于我</span><span class="lang-en">About Me</span></h2><div class="section-kicker"><span class="lang-zh">从算法原型到真实系统验证</span><span class="lang-en">From algorithm prototypes to real-system validation</span></div></div>
   <div class="about-grid">
     <div class="panel about-copy">
@@ -85,7 +104,7 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
   </div>
 </section>
 
-<section class="section" id="research">
+<section class="section tab-panel" id="research" data-tab-panel="research" role="tabpanel" hidden>
   <div class="section-head"><h2><span class="lang-zh">研究方向</span><span class="lang-en">Research Areas</span></h2></div>
   <div class="focus-grid">
     <article class="focus-card"><span class="focus-num">01</span><h3><span class="lang-zh">具身智能与人机交互</span><span class="lang-en">Embodied Intelligence & HRI</span></h3><p><span class="lang-zh">面向机器人协作任务，关注意图推断、主动澄清、多模态状态建模与协作决策。</span><span class="lang-en">Intent inference, active clarification, multimodal state modeling, and collaborative decision-making.</span></p></article>
@@ -96,7 +115,7 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
   </div>
 </section>
 
-<section class="section" id="projects">
+<section class="section tab-panel" id="projects" data-tab-panel="projects" role="tabpanel" hidden>
   <div class="section-head"><h2><span class="lang-zh">代表项目</span><span class="lang-en">Selected Projects</span></h2><div class="section-kicker"><span class="lang-zh">研究、竞赛与工程实践</span><span class="lang-en">Research, competitions, and engineering practice</span></div></div>
   <div class="project-list">
     <article class="project-card"><div class="project-kind"><span class="lang-zh">具身智能<br>研究</span><span class="lang-en">EMBODIED AI<br>RESEARCH</span></div><div><h3><span class="lang-zh">机械臂协作中的意图推断与主动澄清</span><span class="lang-en">Intent Inference and Active Clarification for Collaborative Manipulation</span></h3><p><span class="lang-zh">参与面向协作操作的主动澄清研究，围绕多模态状态建模、动作评估和机器人交互开展算法与系统验证。</span><span class="lang-en">Research on active clarification for collaborative manipulation, including multimodal state modeling, action evaluation, and robotic system validation.</span></p><div class="meta">Human–Robot Interaction · Active Clarification</div></div></article>
@@ -108,7 +127,7 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
   </div>
 </section>
 
-<section class="section" id="opensource">
+<section class="section tab-panel" id="opensource" data-tab-panel="opensource" role="tabpanel" hidden>
   <div class="section-head"><h2><span class="lang-zh">开源与技术栈</span><span class="lang-en">Open Source & Technical Stack</span></h2></div>
   <div class="opensource-grid">
     <a class="repo" href="https://github.com/Geezer565/ACLF_MPC_ROS_GO2" target="_blank" rel="noreferrer"><div class="repo-head"><h3>ACLF MPC ROS GO2</h3><span class="repo-arrow">↗</span></div><p><span class="lang-zh">四足机器人自适应预测控制框架</span><span class="lang-en">Adaptive model predictive control for quadruped robots</span></p></a>
@@ -124,7 +143,7 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
   </div>
 </section>
 
-<section class="section" id="outputs">
+<section class="section tab-panel" id="outputs" data-tab-panel="outputs" role="tabpanel" hidden>
   <div class="section-head"><h2><span class="lang-zh">成果与经历</span><span class="lang-en">Outputs & Experience</span></h2></div>
   <div class="timeline">
     <div class="timeline-item"><div class="timeline-time">2026</div><div class="timeline-body"><h3><span class="lang-zh">全国大学生智能汽车竞赛全国总决赛二等奖</span><span class="lang-en">National Second Prize, National Intelligent Car Competition</span></h3><p><span class="lang-zh">智慧医疗赛项 · 团队项目</span><span class="lang-en">Smart Healthcare Track · Team Project</span></p></div></div>
@@ -133,7 +152,7 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
   </div>
 </section>
 
-<section class="section" id="contact">
+<section class="section tab-panel" id="contact" data-tab-panel="contact" role="tabpanel" hidden>
   <div class="contact-card">
     <div><h2><span class="lang-zh">欢迎交流与合作</span><span class="lang-en">Let's Connect</span></h2><p><span class="lang-zh">具身智能、机器人控制、无人系统、智能硬件或 AI Agent</span><span class="lang-en">Embodied AI, robot control, autonomous systems, intelligent hardware, and AI agents</span></p></div>
     <a class="mail" href="mailto:maxiaobing0518@foxmail.com">maxiaobing0518@foxmail.com</a>
@@ -154,6 +173,35 @@ main{max-width:var(--max);margin:auto;padding:62px 34px 80px}.section{margin-bot
     document.title=next==="zh"?"马小兵 · 个人学术主页":"Xiaobing Ma · Academic Homepage";
     localStorage.setItem("homepage-language",next);
   });
+
+  var buttons=Array.prototype.slice.call(document.querySelectorAll("[data-tab]"));
+  var panels=Array.prototype.slice.call(document.querySelectorAll("[data-tab-panel]"));
+  function showTab(id,updateHash){
+    if(!panels.some(function(panel){return panel.dataset.tabPanel===id;})){id="about";}
+    buttons.forEach(function(button){
+      var selected=button.dataset.tab===id;
+      button.classList.toggle("active",selected);
+      button.setAttribute("aria-selected",selected?"true":"false");
+      button.setAttribute("tabindex",selected?"0":"-1");
+    });
+    panels.forEach(function(panel){
+      var selected=panel.dataset.tabPanel===id;
+      panel.hidden=!selected;
+      panel.classList.toggle("active",selected);
+    });
+    if(updateHash&&history.replaceState){history.replaceState(null,"","#"+id);}
+  }
+  buttons.forEach(function(button,index){
+    button.addEventListener("click",function(){showTab(button.dataset.tab,true);window.scrollTo({top:document.querySelector(".tab-shell").offsetTop-64,behavior:"smooth"});});
+    button.addEventListener("keydown",function(event){
+      if(event.key!=="ArrowLeft"&&event.key!=="ArrowRight")return;
+      event.preventDefault();
+      var next=(index+(event.key==="ArrowRight"?1:-1)+buttons.length)%buttons.length;
+      buttons[next].focus();
+      showTab(buttons[next].dataset.tab,true);
+    });
+  });
+  showTab(location.hash.slice(1)||"about",false);
 })();
 </script>
 </body>
