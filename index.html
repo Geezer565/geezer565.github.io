@@ -173,8 +173,7 @@ main{max-width:var(--max);margin:auto;padding:32px 34px 80px}.section{margin-bot
 <script>
 (function(){
   var body=document.body;
-  var saved=localStorage.getItem("homepage-language");
-  var initial=(saved==="zh"||saved==="en")?saved:"en";
+  var initial="en";
   body.setAttribute("data-lang",initial);
   document.documentElement.lang=initial==="zh"?"zh-CN":"en";
   document.title=initial==="zh"?"马小兵 · 个人学术主页":"Xiaobing Ma · Academic Homepage";
@@ -183,7 +182,6 @@ main{max-width:var(--max);margin:auto;padding:32px 34px 80px}.section{margin-bot
     body.setAttribute("data-lang",next);
     document.documentElement.lang=next==="zh"?"zh-CN":"en";
     document.title=next==="zh"?"马小兵 · 个人学术主页":"Xiaobing Ma · Academic Homepage";
-    localStorage.setItem("homepage-language",next);
   });
 
   var buttons=Array.prototype.slice.call(document.querySelectorAll("[data-tab]"));
