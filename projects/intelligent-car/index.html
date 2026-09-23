@@ -1,1 +1,86 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="ROS 2 autonomous vehicle with camera-LiDAR fusion for the Smart Healthcare challenge."><title>21st National Intelligent Car Competition · D-Robotics Smart Healthcare Challenge · Xiaobing Ma</title><script>(function(){try{var saved=localStorage.getItem("site-theme");var theme=saved||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",theme);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script><link rel="stylesheet" href="../project.css"></head><body data-lang="en"><header class="topbar"><div class="topbar-inner"><a class="back" href="../../#projects"><span class="back-mark">←</span><span class="lang-zh">返回项目列表</span><span class="lang-en">Back to projects</span></a><div class="controls"><button class="control" id="themeToggle" type="button" aria-label="Switch theme">☾</button><button class="control" id="langToggle" type="button">中文</button></div></div></header><main><section class="hero"><div class="eyebrow">NATIONAL COMPETITION · TEAM PROJECT</div><h1><span class="lang-zh">第二十一届全国大学生智能汽车竞赛 · 地瓜机器人智慧医疗挑战赛</span><span class="lang-en">21st National Intelligent Car Competition · D-Robotics Smart Healthcare Challenge</span></h1><p class="lead lang-zh">面向“智慧医疗”赛题，团队构建了由视觉—激光雷达融合、局部目标点预测、底盘控制与任务状态机组成的 ROS 2 自主智能车。</p><p class="lead lang-en">For the “Smart Healthcare” challenge, the team built a ROS 2 autonomous vehicle combining camera–LiDAR fusion, local waypoint prediction, chassis control, and a mission state machine.</p><div class="badges"><span class="badge">National Finals Second Prize</span><span class="badge">South China Regional First Prize</span><span class="badge">RDK X5</span><span class="badge">ROS 2 Humble</span><span class="badge">Camera–LiDAR</span></div><figure class="project-image"><img src="../../assets/projects/ros-smart-car.jpg" alt="Autonomous smart car for the D-Robotics Creative Division" loading="eager"></figure></section><section class="section"><h2><span class="lang-zh">赛题是什么</span><span class="lang-en">The Challenge</span></h2><p class="lang-zh">智慧医疗赛项要求智能车在模拟医疗场景中自主完成任务：从起点驶向任务发布点，获取二维码与图文信息，按任务要求通过指定通道，最后避障返回终点。我们的参赛车围绕环境感知、局部目标点预测、运动控制和任务切换搭建系统。</p><p class="lang-en">In this simulated healthcare setting, the car must autonomously reach a task station, read QR and visual information, follow the assigned corridor task, and return to the start while avoiding obstacles. Our team built the vehicle around perception, local waypoint prediction, motion control, and mission transitions.</p></section><section class="detail-grid"><article class="card"><div class="card-num">01</div><h2><span class="lang-zh">感知与融合</span><span class="lang-en">Perception and Fusion</span></h2><div class="lang-zh"><p>USB 相机与 N10 激光雷达提供环境信息，图像—雷达融合网络输出局部目标点，为控制层提供可执行的空间参考。</p></div><div class="lang-en"><p>A USB camera and N10 LiDAR provide scene information. The image–radar fusion network predicts a local waypoint for the controller.</p></div></article><article class="card"><div class="card-num">02</div><h2><span class="lang-zh">控制与底盘</span><span class="lang-en">Control and Chassis</span></h2><div class="lang-zh"><p>上位机生成速度与转向指令，STM32 驱动 Ackermann 底盘并回传车速、惯导和电压等状态。</p></div><div class="lang-en"><p>The upper computer generates speed and steering commands. An STM32 drives the Ackermann chassis and returns speed, IMU, and voltage states.</p></div></article><article class="card"><div class="card-num">03</div><h2><span class="lang-zh">任务系统</span><span class="lang-en">Mission System</span></h2><div class="lang-zh"><p>任务状态机组织顺逆时针绕行、返回、停车与语义任务切换，并将感知、控制和执行串成完整链路。</p></div><div class="lang-en"><p>A mission state machine coordinates clockwise and counterclockwise navigation, return, stop, and semantic-task transitions.</p></div></article></section><section class="section"><h2><span class="lang-zh">项目路径</span><span class="lang-en">Project Path</span></h2><div class="flow"><div class="step"><span class="lang-zh">相机与雷达感知</span><span class="lang-en">Camera and LiDAR sensing</span></div><div class="step"><span class="lang-zh">融合网络预测目标点</span><span class="lang-en">Predict local waypoint</span></div><div class="step"><span class="lang-zh">生成速度与转向</span><span class="lang-en">Generate motion commands</span></div><div class="step"><span class="lang-zh">底盘执行与状态反馈</span><span class="lang-en">Execute and report state</span></div></div></section><section class="section media-section"><h2><span class="lang-zh">比赛现场</span><span class="lang-en">Competition Moments</span></h2><figure class="team-shot"><img src="../../assets/projects/smart-car-team.jpg" alt="South China University of Technology smart car team at the 2026 national competition" loading="lazy" decoding="async"><figcaption><span class="lang-zh">华南理工大学参赛队在全国总决赛现场 · 2026 年 8 月</span><span class="lang-en">The SCUT team at the national finals · August 2026</span></figcaption></figure><div class="clip-grid"><figure class="clip"><img src="../../assets/projects/smart-car-course.gif" alt="Smart car driving across the competition course" loading="lazy" decoding="async"><figcaption><span class="lang-zh">赛场行驶</span><span class="lang-en">On the course</span></figcaption></figure><figure class="clip"><img src="../../assets/projects/smart-car-transition.gif" alt="Smart car moving from the blue zone into the yellow lane" loading="lazy" decoding="async"><figcaption><span class="lang-zh">驶入通道</span><span class="lang-en">Entering the lane</span></figcaption></figure><figure class="clip"><img src="../../assets/projects/smart-car-turn.gif" alt="Smart car turning on the competition course" loading="lazy" decoding="async"><figcaption><span class="lang-zh">转弯行驶</span><span class="lang-en">Taking a turn</span></figcaption></figure></div></section><section class="section"><h2><span class="lang-zh">相关链接</span><span class="lang-en">Links</span></h2><div class="links"><a class="repo-link" href="https://www.smartcar.zone/" target="_blank" rel="noreferrer"><span class="lang-zh">全国大学生智能汽车竞赛官网</span><span class="lang-en">Competition website</span> ↗</a><a class="repo-link" href="https://blog.csdn.net/zhuoqingjoking97298/article/details/156079740" target="_blank" rel="noreferrer"><span class="lang-zh">地瓜机器人智慧医疗赛项说明</span><span class="lang-en">Smart Healthcare challenge brief</span> ↗</a><a class="repo-link" href="https://github.com/Geezer565/ImgRadarNet" target="_blank" rel="noreferrer">ImgRadarNet ↗</a><a class="repo-link" href="https://github.com/Geezer565/ros_competition_2025" target="_blank" rel="noreferrer">ROS System ↗</a></div></section><aside class="note"><strong><span class="lang-zh">当前状态</span><span class="lang-en">Current Status</span></strong><p class="lang-zh">团队项目。获 2026 年第二十一届全国大学生智能汽车竞赛全国总决赛“智慧医疗”二等奖、华南赛区区域赛一等奖。</p><p class="lang-en">Team project. Awarded Second Prize in the “Smart Healthcare” National Finals and First Prize in the South China Regional Competition of the 21st National Intelligent Car Competition (2026).</p></aside></main><footer class="footer">© 2026 Xiaobing Ma · <a href="../../">Academic Homepage</a></footer><script src="../project.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A camera–LiDAR autonomous car built for the 21st National Intelligent Car Competition Smart Healthcare challenge.">
+  <title>Smart Healthcare Autonomous Car · Xiaobing Ma</title>
+  <script>(function(){try{var saved=localStorage.getItem("site-theme");var theme=saved||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",theme);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
+  <link rel="stylesheet" href="../project.css">
+  <link rel="stylesheet" href="./case.css">
+</head>
+<body data-lang="en">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="back" href="../../#projects"><span class="back-mark">←</span><span class="lang-zh">返回项目列表</span><span class="lang-en">Back to projects</span></a>
+      <div class="controls"><button class="control" id="themeToggle" type="button" aria-label="Switch theme">☾</button><button class="control" id="langToggle" type="button">中文</button></div>
+    </div>
+  </header>
+  <main class="case-page">
+    <section class="case-intro" aria-labelledby="case-title">
+      <div class="case-kicker"><span class="case-index">01 / PROJECT</span><span class="case-rule"></span><span class="lang-en">Autonomous robotics · 2026</span><span class="lang-zh">自主机器人 · 2026</span></div>
+      <div class="case-intro-grid">
+        <div class="case-intro-copy">
+          <p class="case-overline"><span class="lang-en">21st National Intelligent Car Competition</span><span class="lang-zh">第二十一届全国大学生智能汽车竞赛</span></p>
+          <h1 id="case-title"><span class="lang-en">A smarter way through the course.</span><span class="lang-zh">让智能车自主穿越赛道。</span></h1>
+          <p class="case-lead lang-en">For the D-Robotics Smart Healthcare challenge, our team built a ROS 2 vehicle that sees with a camera and LiDAR, predicts where to go next, and turns that decision into motion.</p>
+          <p class="case-lead lang-zh">面向地瓜机器人智慧医疗挑战赛，我们搭建了一辆 ROS 2 智能车：用相机与激光雷达感知环境，预测下一步目标点，再将决策转化为底盘运动。</p>
+          <div class="case-awards">
+            <div><span class="case-award-mark">★</span><span class="lang-en">National Finals · Second Prize</span><span class="lang-zh">全国总决赛 · 二等奖</span></div>
+            <div><span class="case-award-mark">★</span><span class="lang-en">South China Region · First Prize</span><span class="lang-zh">华南赛区区域赛 · 一等奖</span></div>
+          </div>
+          <a class="case-primary-link" href="https://www.smartcar.zone/" target="_blank" rel="noopener noreferrer"><span class="lang-en">Competition website</span><span class="lang-zh">竞赛官网</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="case-intro-media"><img src="../../assets/projects/ros-smart-car.jpg" alt="Orange autonomous smart car with camera and LiDAR on the competition course" loading="eager"><figcaption><span class="lang-en">The camera–LiDAR vehicle on the course</span><span class="lang-zh">搭载相机与激光雷达的参赛车辆</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-story" aria-labelledby="challenge-title">
+      <div class="case-section-label"><span>01</span><span class="lang-en">THE CHALLENGE</span><span class="lang-zh">赛题</span></div>
+      <div class="case-story-grid">
+        <div class="case-story-copy">
+          <h2 id="challenge-title"><span class="lang-en">From a task prompt to an autonomous run.</span><span class="lang-zh">从获取任务，到自主完成赛道。</span></h2>
+          <p class="lang-en">The simulated healthcare course asks the car to reach a task station, read QR and visual cues, follow the assigned corridor, avoid obstacles, and return to the finish. Each step depends on the previous one: perception only matters when it can guide a reliable driving decision.</p>
+          <p class="lang-zh">在模拟医疗场景中，智能车需要抵达任务发布点，读取二维码与图文信息，按照任务要求通过指定通道，避障并返回终点。关键并非单独识别某个目标，而是让感知结果持续支持可靠的行驶决策。</p>
+          <a class="case-text-link" href="https://blog.csdn.net/zhuoqingjoking97298/article/details/156079740" target="_blank" rel="noopener noreferrer"><span class="lang-en">Read the challenge brief</span><span class="lang-zh">查看赛项说明</span> ↗</a>
+        </div>
+        <figure class="case-story-media"><img src="../../assets/projects/smart-car-course.gif" alt="Autonomous smart car driving on the competition course" loading="lazy" decoding="async"><figcaption><span class="lang-en">On the course · autonomous driving test</span><span class="lang-zh">赛场行驶 · 自主驾驶测试</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-story case-story-reverse" aria-labelledby="system-title">
+      <div class="case-section-label"><span>02</span><span class="lang-en">THE SYSTEM</span><span class="lang-zh">系统</span></div>
+      <div class="case-story-grid">
+        <div class="case-story-copy">
+          <h2 id="system-title"><span class="lang-en">One loop, from sensing to steering.</span><span class="lang-zh">从感知到转向，形成完整闭环。</span></h2>
+          <p class="lang-en">A USB camera and N10 LiDAR feed an image–radar fusion model that predicts a local waypoint. The upper computer converts that target into speed and steering commands; an STM32 drives the Ackermann chassis and returns vehicle state. A mission state machine coordinates navigation and task transitions.</p>
+          <p class="lang-zh">USB 相机与 N10 激光雷达为图像—雷达融合模型提供输入，模型预测局部目标点。上位机据此生成速度和转向指令，由 STM32 驱动 Ackermann 底盘并回传车况；任务状态机负责组织导航和任务切换。</p>
+          <div class="case-specs" aria-label="Project technology">
+            <div><span class="lang-en">Compute</span><span class="lang-zh">计算平台</span><strong>RDK X5 · ROS 2</strong></div>
+            <div><span class="lang-en">Sensing</span><span class="lang-zh">环境感知</span><strong>USB Camera · N10 LiDAR</strong></div>
+            <div><span class="lang-en">Motion</span><span class="lang-zh">运动执行</span><strong>STM32 · Ackermann</strong></div>
+          </div>
+          <div class="case-inline-links"><a class="case-text-link" href="https://github.com/Geezer565/ImgRadarNet" target="_blank" rel="noopener noreferrer">ImgRadarNet ↗</a><a class="case-text-link" href="https://github.com/Geezer565/ros_competition_2025" target="_blank" rel="noopener noreferrer">ROS System ↗</a></div>
+        </div>
+        <figure class="case-story-media"><img src="../../assets/projects/smart-car-transition.gif" alt="Smart car autonomously entering a marked lane" loading="lazy" decoding="async"><figcaption><span class="lang-en">Entering the lane · perception translated into motion</span><span class="lang-zh">驶入通道 · 将感知结果转化为运动</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="case-story case-outcome" aria-labelledby="outcome-title">
+      <div class="case-section-label"><span>03</span><span class="lang-en">THE OUTCOME</span><span class="lang-zh">成果</span></div>
+      <div class="case-story-grid">
+        <div class="case-story-copy">
+          <h2 id="outcome-title"><span class="lang-en">Built together. Tested in competition.</span><span class="lang-zh">团队协作，在赛场检验系统。</span></h2>
+          <p class="lang-en">This was a team project at the 2026 national competition. The vehicle and its integrated sensing-and-control system earned Second Prize at the National Finals and First Prize in the South China Regional Competition.</p>
+          <p class="lang-zh">这是 2026 年竞赛中的团队项目。参赛车辆及其感知、决策与控制系统获得全国总决赛二等奖、华南赛区区域赛一等奖。</p>
+          <p class="case-credit"><span class="lang-en">21st National Intelligent Car Competition · D-Robotics Smart Healthcare Challenge</span><span class="lang-zh">第二十一届全国大学生智能汽车竞赛 · 地瓜机器人智慧医疗挑战赛</span></p>
+        </div>
+        <figure class="case-story-media case-team-media"><img src="../../assets/projects/smart-car-team.jpg" alt="South China University of Technology team at the 2026 National Intelligent Car Competition" loading="lazy" decoding="async"><figcaption><span class="lang-en">SCUT team at the National Finals · August 2026</span><span class="lang-zh">华南理工大学参赛队在全国总决赛现场 · 2026 年 8 月</span></figcaption></figure>
+      </div>
+    </section>
+    <a class="case-next" href="../../#projects"><span class="lang-en">← Explore other projects</span><span class="lang-zh">← 查看其他项目</span></a>
+  </main>
+  <footer class="footer">© 2026 Xiaobing Ma · <a href="../../">Academic Homepage</a></footer>
+  <script src="../project.js"></script>
+</body>
+</html>
