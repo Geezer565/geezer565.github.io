@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="ESP32 smart cup team project: voice, Wi-Fi mini-program and Bluetooth app interaction, monitoring and hydration reminders.">
+  <title>ESP32 Smart Cup · Xiaobing Ma</title>
+  <script>(function(){try{var saved=localStorage.getItem("site-theme");var theme=saved||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.setAttribute("data-theme",theme);}catch(e){document.documentElement.setAttribute("data-theme","light");}})();</script>
+  <link rel="stylesheet" href="../project.css">
+  <link rel="stylesheet" href="./smart-cup.css">
+</head>
+<body data-lang="en">
+  <header class="topbar"><div class="topbar-inner"><a class="back" href="../../#projects"><span class="back-mark">←</span><span class="lang-zh">返回项目列表</span><span class="lang-en">Back to projects</span></a><div class="controls"><button class="control" id="themeToggle" type="button" aria-label="Switch theme">☾</button><button class="control" id="langToggle" type="button">中文</button></div></div></header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">EMBEDDED SYSTEMS · TEAM PROJECT</div>
+      <h1><span class="lang-zh">ESP32 物联网智能水杯</span><span class="lang-en">ESP32 Smart Cup</span></h1>
+      <p class="lead lang-zh">带领团队围绕日常饮水场景开发智能水杯，把设备端感知、语音交互和移动端连接起来，实现动态监测与喝水提醒。</p>
+      <p class="lead lang-en">Led a team project for a connected cup that brings together device-side sensing, voice interaction, and mobile access for monitoring and hydration reminders.</p>
+      <div class="badges"><span class="badge">ESP32</span><span class="badge">Voice</span><span class="badge">Wi‑Fi</span><span class="badge">Bluetooth</span><span class="badge"><span class="lang-zh">团队项目</span><span class="lang-en">Team Project</span></span></div>
+      <figure class="concept-figure"><img src="../../assets/projects/smart-cup-concept.png" alt="智能水杯外观与内部结构的设计概念图，展示杯盖、内胆、称重传感器、HX711 模块和底部夹层"><figcaption><span class="lang-zh">外观与内部结构设计草稿。图中部件为概念方案，不代表这些结构均已制作或测试。</span><span class="lang-en">Appearance and internal-structure concept. Components shown are design ideas, not proof that every part was built or tested.</span></figcaption></figure>
+    </section>
+    <section class="section"><h2><span class="lang-zh">项目如何工作</span><span class="lang-en">How the system works</span></h2><p class="lang-zh">项目以 ESP32 为设备端核心：水杯提供动态监测和喝水提醒，并通过语音、小程序 Wi‑Fi 和 App 蓝牙三种方式与用户交互。重点在于把设备、无线连接与提醒体验串成完整的使用流程。</p><p class="lang-en">The ESP32 anchors the device side. The cup supports monitoring and hydration reminders, with voice, Wi‑Fi mini-program, and Bluetooth app interactions. The work connects the device, wireless links, and reminder experience into one user flow.</p><div class="flow"><div class="step"><span class="lang-zh">设备端监测</span><span class="lang-en">Device monitoring</span></div><div class="step"><span class="lang-zh">Wi‑Fi / 蓝牙连接</span><span class="lang-en">Wi‑Fi / Bluetooth link</span></div><div class="step"><span class="lang-zh">语音与移动端交互</span><span class="lang-en">Voice and mobile interaction</span></div><div class="step"><span class="lang-zh">喝水提醒</span><span class="lang-en">Hydration reminder</span></div></div></section>
+    <section class="detail-grid"><article class="card"><div class="card-num">01 · DEVICE</div><h2><span class="lang-zh">嵌入式设备</span><span class="lang-en">Embedded device</span></h2><p class="lang-zh">基于 ESP32 组织设备端功能，将动态监测与提醒逻辑放进智能水杯的使用场景。</p><p class="lang-en">Used ESP32 for the device-side functions, connecting monitoring and reminder behavior to the cup's everyday use.</p></article><article class="card"><div class="card-num">02 · INTERACTION</div><h2><span class="lang-zh">多端交互</span><span class="lang-en">Multiple interfaces</span></h2><p class="lang-zh">语音、小程序 Wi‑Fi 与 App 蓝牙提供不同的交互入口，覆盖设备与手机之间的连接。</p><p class="lang-en">Voice, Wi‑Fi mini-program, and Bluetooth app offered different ways to interact with the device.</p></article><article class="card"><div class="card-num">03 · OUTCOME</div><h2><span class="lang-zh">竞赛成果</span><span class="lang-en">Competition outcome</span></h2><p class="lang-zh">团队项目获得“毛宗源杯”智能控制设计大赛优胜奖。</p><p class="lang-en">The team project received a Merit Award in the Mao Zongyuan Cup Intelligent Control Design Competition.</p></article></section>
+    <aside class="note"><strong><span class="lang-zh">图片与成果说明</span><span class="lang-en">Image and evidence note</span></strong><p class="lang-zh">上图是设计概念图，不是实物照片。知识库目前没有公开代码、硬件测试数据或称重模块的实装证据，因此本页不提供代码地址，也不把概念图中的部件写成已验证功能。</p><p class="lang-en">The image above is a concept rendering, not a prototype photograph. The available records do not establish public code, hardware test results, or a verified weight-sensing build; this page makes no such claims.</p></aside>
+  </main>
+  <footer class="footer">© 2026 Xiaobing Ma · <a href="../../">Academic Homepage</a></footer>
+  <script src="../project.js"></script>
+</body>
+</html>
